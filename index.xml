@@ -6,35 +6,36 @@
     <description>Recent content on MicroPython for BeagleConnect Freedom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2016. All rights reserved.</copyright><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Journal</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/journal/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/journal/</guid>
+      <description>Week 1:
+June 7:Read about pinctrl api and went through CircuitPython documentation June 8:Had meeting with Scott from Adafruit June 9:Started work on intro video June 10:Tried porting Zephyr to nRF52840(couldn&#39;t succeed) June 11:Completed Intro video slides June 12:Recorded video and coordinated with dhl and fedex w.r.t shipment of hardware June 13:Uploaded video  Week 2:
+June 14:Wrote blog about BeagleConnect Freedom June 15:Went through Documents provided by Zephyr folks on their forum regarding the project  Week 3:</description>
+    </item>
+    
+    <item>
+      <title>Building a MicroPython port for QEMU on Zephyr RTOS</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-a-micropython-port-for-qemu-on-zephyr-rtos/</link>
+      <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-a-micropython-port-for-qemu-on-zephyr-rtos/</guid>
+      <description>Table of contents 1)The BeagleConnect Freedom 2)What is MicroPython 3)Setting up Zephyr RTOS 4)QEMU 5)Building port on Zephyr RTOS 6)References  The Beagleconnect Freedom BeagleConnect is a revolutionary technology which eliminates low-level software development for IoT and IIoT applications, such as building automation, factory automation, and home automation. What sets it apart is that it eliminates the need of relying on software libraries enabling it to be used for interfacing a greater number of sensors, actuators and indicators for communicating over various networks compared to other conventional solutions.</description>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/about/</guid>
-      <description>My name is Yadnik Bendale and I will be working under the project MicroPython for BeagleConnect Freedom(https://elinux.org/BeagleBoard/GSoC_2021/Micropython_for_BeagleConnect_Freedom).
-The project includes porting MicroPython and CircuitPython support to the BeagleConnect Freedom Device as well as writing drivers for interfaces like GPIO, I2C, SPI, PWM, UART and ADC in MicroPython.
-Thanks for reading!</description>
-    </item>
-    
-    <item>
-      <title>Journal</title>
-      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/journal/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/journal/</guid>
-      <description>Week 1:
-Week 2:
-Week 3:
-Week 4:
-Week 5:
-Week 6:
-Week 7:
-Week 8:
-Week 9:
-Week 10:
-Week 11:</description>
+      <description>My name is Yadnik Bendale and I will be working on the project MicroPython for BeagleConnect Freedom(https://elinux.org/BeagleBoard/GSoC_2021/Micropython_for_BeagleConnect_Freedom).
+The project includes porting MicroPython and CircuitPython support to the BeagleConnect Freedom Device as well as writing drivers for interfaces like GPIO, I2C, SPI, PWM, UART and ADC in MicroPython.</description>
     </item>
     
   </channel>

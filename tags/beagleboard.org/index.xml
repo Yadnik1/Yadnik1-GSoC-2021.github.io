@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BeagleBoard.org on MicroPython for BeagleConnect Freedom</title>
+    <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/beagleboard.org/</link>
+    <description>Recent content in BeagleBoard.org on MicroPython for BeagleConnect Freedom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/beagleboard.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a MicroPython port for QEMU on Zephyr RTOS</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-a-micropython-port-for-qemu-on-zephyr-rtos/</link>
+      <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-a-micropython-port-for-qemu-on-zephyr-rtos/</guid>
+      <description>Table of contents 1)The BeagleConnect Freedom 2)What is MicroPython 3)Setting up Zephyr RTOS 4)QEMU 5)Building port on Zephyr RTOS 6)References  The Beagleconnect Freedom BeagleConnect is a revolutionary technology which eliminates low-level software development for IoT and IIoT applications, such as building automation, factory automation, and home automation. What sets it apart is that it eliminates the need of relying on software libraries enabling it to be used for interfacing a greater number of sensors, actuators and indicators for communicating over various networks compared to other conventional solutions.</description>
+    </item>
+    
+  </channel>
+</rss>
