@@ -154,7 +154,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/https://github.com/jadonk/beagleconnect" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+      <a class="pure-menu-link" href="https://github.com/jadonk/beagleconnect" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
 
@@ -212,7 +212,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>14 Jun 2021, 00:00</time>
+    <time>14 Jun 2021</time>
   </div>
 
   
@@ -299,10 +299,13 @@ We will be also using it for running the Zephyr RTOS and building MicroPython fo
 <p>Once Zephyr is installed we may then need to configure your environment, for example by sourcing zephyrproject/zephyr/zephyr-env.sh</p>
 <p>Once Zephyr is ready to use we can build the MicroPython port.</p>
 <p>We will first have to clone the MicroPython repository into our home directory using</p>
-<p>$ Git clone <a href="https://github.com/micropython/micropython">https://github.com/micropython/micropython</a></p>
+<p><code>$ Git clone https://github.com/micropython/micropython</code></p>
 <p>To build for QEMU we finally run</p>
 <p><code>$ west build -b qemu_cortex_m3 ~/micropython/ports/zephyr</code></p>
 <p>Once the port has been built successfully the resulting firmware is flashed to the BeagleConnect Freedom Board. A successful build looks as follows.</p>
+<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/image1.png" alt="image alt text">
+<img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/image2.png" alt="image alt text">
+<img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/image3.png" alt="image alt text"></p>
 <h2 id="references">References</h2>
 <p><a href="https://github.com/micropython/micropython/blob/master/ports/zephyr/README.md">https://github.com/micropython/micropython/blob/master/ports/zephyr/README.md</a>
 <a href="https://docs.zephyrproject.org/latest/application/index.html">https://docs.zephyrproject.org/latest/application/index.html</a>
