@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 14 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/embedded-systems/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/embedded-systems/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a MicroPython port for QEMU on Zephyr RTOS</title>
-      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-a-micropython-port-for-qemu-on-zephyr-rtos/</link>
-      <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
+      <title>Building and Flashing Firmware on BeagleConnect Freedom</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-a-micropython-port-for-qemu-on-zephyr-rtos/</guid>
-      <description>Table of contents 1)The BeagleConnect Freedom 2)What is MicroPython 3)Setting up Zephyr RTOS 4)QEMU 5)Building port on Zephyr RTOS 6)References  The Beagleconnect Freedom BeagleConnect is a revolutionary technology which eliminates low-level software development for IoT and IIoT applications, such as building automation, factory automation, and home automation. What sets it apart is that it eliminates the need of relying on software libraries enabling it to be used for interfacing a greater number of sensors, actuators and indicators for communicating over various networks compared to other conventional solutions.</description>
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/</guid>
+      <description>Table of contents  Prerequisites Building the MicoPython application Flashing the MicroPython application References  Prerequisites  Before performing building and flashing operations we need to make sure that we have installed all the dependencies. For installing all the dependencies you can follow my previous blog or follow zephyr documentation. Since the BeagleConnect Freedom Board has not yet been merged in the Zephyr upstream please clone forked repository once all the remaining dependencies have been installed, remove the zephyr folder from the zephyrproject directory and paste the cloned zephyr folder into it to make sure that our board exists in the board directory while building it.</description>
     </item>
     
   </channel>
