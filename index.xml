@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 30 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blinking LED using flashed MicroPython Application</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/</guid>
+      <description>Table of contents  Prerequisites Blinking on board LED Performing some basic Python operations References  Prerequisites  Before validating the falshed firmware we must flash the MicroPython application firmware,for which you can follow my previous blog To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.</description>
+    </item>
+    
     <item>
       <title>Building and Flashing Firmware on BeagleConnect Freedom</title>
       <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/</link>

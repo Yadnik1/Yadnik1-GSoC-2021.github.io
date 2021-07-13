@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This blog covers building and flashinng Zephyr applications from source on the BeagleConnect Freedom device using west commands ">
+  <meta name="description" content="This blog covers validating the flashed  MicroPython application firmware on the BeagleConnect Freedom ">
   <meta name="generator" content="Hugo 0.83.1" />
 
-  <title>Building and Flashing Firmware on BeagleConnect Freedom &middot; MicroPython for BeagleConnect Freedom</title>
+  <title>Blinking LED using flashed MicroPython Application &middot; MicroPython for BeagleConnect Freedom</title>
 
     
 
@@ -203,8 +203,8 @@
 
 
 <div class="header">
-  <h1>Building and Flashing Firmware on BeagleConnect Freedom</h1>
-  <h2>This blog covers building and flashinng Zephyr applications from source on the BeagleConnect Freedom device using west commands </h2>
+  <h1>Blinking LED using flashed MicroPython Application</h1>
+  <h2>This blog covers validating the flashed  MicroPython application firmware on the BeagleConnect Freedom </h2>
 </div>
 <div class="content">
 
@@ -212,7 +212,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>30 Jun 2021</time>
+    <time>11 Jul 2021</time>
   </div>
 
   
@@ -240,80 +240,52 @@
   <h2 id="table-of-contents">Table of contents</h2>
 <ol>
 <li>Prerequisites</li>
-<li>Building the MicoPython application</li>
-<li>Flashing the MicroPython application</li>
+<li>Blinking on board LED</li>
+<li>Performing some basic Python operations</li>
 <li>References</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
-<li>Before performing building and flashing operations we need to make sure that we have installed all the dependencies. For installing all the dependencies you can follow my <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-a-micropython-port-for-qemu-on-zephyr-rtos/">previous blog</a> or follow <a href="https://docs.zephyrproject.org/latest/getting_started/index.html">zephyr documentation</a>.</li>
-<li>Since the BeagleConnect Freedom Board has not yet been merged in the Zephyr upstream please clone <a href="https://github.com/Yadnik1/zephyr">forked repository</a> once all the remaining dependencies have been installed, remove the zephyr folder from the zephyrproject directory and paste the cloned zephyr folder into it to make sure that our board exists in the board directory while building it.</li>
-<li>Clone the <a href="https://github.com/micropython/micropython.git">MicroPython repository</a> in your home directory.</li>
+<li>Before validating the falshed firmware we must flash the MicroPython application firmware,for which you can follow my <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/">previous blog</a></li>
+<li>To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.For example to install picocom on Linux you can run:</li>
 </ol>
-<h2 id="building-the-micopython-application">Building the MicoPython application:</h2>
-<p>Once Zephyr is ready to use you can build the MicroPython port just like any other Zephyr application. You can do this anywhere in your file system, it does not have to be in the ports/zephyr directory. Assuming you have cloned the MicroPython repository into your home directory, you can build the Zephyr port for the beagleconnect_freedom_cc1352r board by following the following commands:</p>
-<p><code>cd zephyrproject/zephyr</code></p>
-<p><code>git checkout v2.6.0</code></p>
-<p><code>west update</code></p>
-<p><code>west build -b beagleconnect_freedom_cc1352r ~/micropython/ports/zephyr</code></p>
-<p>You should get an output something like this:</p>
-<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/4.png" alt="image alt text">
-<img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/5.png" alt="image alt text">
-<img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/6.png" alt="image alt text"></p>
-<h2 id="flashing-the-micropython-application">Flashing the MicroPython application:</h2>
-<p>Before moving on to the flashing process we need to take care of a few things:</p>
-<ol>
-<li>
-<p>Install the msp430_python tools python package available here:</p>
-<p><a href="https://github.com/jadonk/ti_msp430_python_tools">https://github.com/jadonk/ti_msp430_python_tools</a></p>
-</li>
-<li>
-<p>Use the command <code>dmesg | tail</code> to locate the tty device.
-On my machine I get /dev/ttyACM0 which is a USB communication device (CDC) of sub-type &ldquo;abstract control model&rdquo; (ACM).</p>
-</li>
-<li>
-<p>Changing permissions on serial ports:
+<p><code> sudo dnf install picocom</code></p>
+<ol start="3">
+<li>Changing permissions on serial ports:
 Use this command to change permission-
-<code>sudo chmod 666 /dev/ttyUSB0</code></p>
-</li>
-<li>
-<p>Make sure that the cc2538-bsl.py script is executable, for which you just have to make the file executable by selecting it in properties as seen:</p>
-</li>
+<code>sudo chmod 666 /dev/ttyUSB0</code></li>
 </ol>
-<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/8.png" alt="image alt text"></p>
-<p>We are now ready to go:
-Before flashing run the command :</p>
-<p><code>cd zephyrproject/zephyr</code></p>
-<p>Once you are in the zephyr directory run the command :</p>
-<p><code>West flash -d build /dev/ttyUSB0</code></p>
-<p>Please make sure to change the tty device as seen in your host machine.
-We use build in the command to specify the location of the Cmake cache whose location can be seen here:
-<img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/9.png" alt="image alt text"></p>
-<p>Once done your output will look like this and now the firmware has been flashed on the BeagleConnect Freedom.
-<img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/7.png" alt="image alt text"></p>
-<p>Bottom 3  LEDs on the board will start glowing once the flash has been completed.</p>
-<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/10.png" alt="image alt text"></p>
-<p>Your flash has been successfully completed and you can now perform numerous MicroPython applications on the BeagleConnect Freedom.</p>
+<h2 id="blinking-on-board-led">Blinking on board LED:</h2>
+<p>For flashing the on board LED we will first have to locate the port number and GPIO pun number associated with the LED on your board,which you can infer from your board schematics found in design files.
+In case on BeagleConnect Freedom the PORT number is A i.e 0 and the GPIO pun mumbers are 14 and 15.We will be blinking the LED associated with GPIO pin number 14 for this illustration.</p>
+<p>Starting off please enter into the terminal emulator program by running the following command :</p>
+<p><code>picocom /dev/ttyUSB0 -b115200</code></p>
+<p>This will make REPL available for usage.Ypu can follow the follow commands form the pictures to blink the on board LED indefinitely.</p>
+<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/13.png" alt="image alt text"></p>
+<p>Note:Once you are done typing out the program press backspace followed by enter for the blinking to initiate.It will look similar to this:</p>
+<p><a href="https://www.youtube.com/watch?v=KB1giV3791Q">https://www.youtube.com/watch?v=KB1giV3791Q</a></p>
+<h2 id="performing-some-basic-python-operations">Performing some basic Python Operations:</h2>
+<p>To validate the flashed firmware we also perform some basin python operations on our BeagleConnect Freedom board,as seen from the image.</p>
+<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/14.png" alt="image alt text"></p>
+<p>Henc we conclude the flashed application firwmware performs all the operations as expected and can be used for furthur applications.</p>
 <h2 id="references">References:</h2>
 <p><a href="https://github.com/micropython/micropython/blob/master/ports/zephyr/README.md">https://github.com/micropython/micropython/blob/master/ports/zephyr/README.md</a>
-<a href="https://docs.zephyrproject.org/latest/getting_started/index.html">https://docs.zephyrproject.org/latest/getting_started/index.html</a>
-<a href="https://github.com/jadonk/beagle_connect_zephyr_board">https://github.com/jadonk/beagle_connect_zephyr_board</a>
-<a href="https://github.com/zephyrproject-rtos/zephyr">https://github.com/zephyrproject-rtos/zephyr</a></p>
+<a href="https://github.com/jadonk/beagle_connect_zephyr_board">https://github.com/jadonk/beagle_connect_zephyr_board</a></p>
 
   
   <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fbuilding-and-flashing-firmware-on-beagleconnect-freedom%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fbuilding-and-flashing-firmware-on-beagleconnect-freedom%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fbuilding-and-flashing-firmware-on-beagleconnect-freedom%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fbuilding-and-flashing-firmware-on-beagleconnect-freedom%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fbuilding-and-flashing-firmware-on-beagleconnect-freedom%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fbuilding-and-flashing-firmware-on-beagleconnect-freedom%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -345,8 +317,14 @@ We use build in the command to specify the location of the Cmake cache whose loc
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
+    <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/"><i class="fa fa-chevron-left"></i></a>
+    
   </div>
   <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/">Building and Flashing Firmware on BeagleConnect Freedom</a>
+    </nav>
     
   </div>
   <div class="pure-u-2-24">
@@ -354,14 +332,8 @@ We use build in the command to specify the location of the Cmake cache whose loc
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/">Blinking LED using flashed MicroPython Application</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
