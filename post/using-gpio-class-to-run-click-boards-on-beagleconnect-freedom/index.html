@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This blog covers validating the flashed  MicroPython application firmware on the BeagleConnect Freedom ">
+  <meta name="description" content="This blog covers the use of Water Detect Click and Relay Click on BeagleConnect Freedom using the Zephyr Port of MicroPython">
   <meta name="generator" content="Hugo 0.83.1" />
 
-  <title>Blinking LED using flashed MicroPython Application &middot; MicroPython for BeagleConnect Freedom</title>
+  <title>Using GPIO class to run Click Boards on BeagleConnect Freedom &middot; MicroPython for BeagleConnect Freedom</title>
 
     
 
@@ -203,8 +203,8 @@
 
 
 <div class="header">
-  <h1>Blinking LED using flashed MicroPython Application</h1>
-  <h2>This blog covers validating the flashed  MicroPython application firmware on the BeagleConnect Freedom </h2>
+  <h1>Using GPIO class to run Click Boards on BeagleConnect Freedom</h1>
+  <h2>This blog covers the use of Water Detect Click and Relay Click on BeagleConnect Freedom using the Zephyr Port of MicroPython</h2>
 </div>
 <div class="content">
 
@@ -212,7 +212,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Jul 2021</time>
+    <time>28 Jul 2021</time>
   </div>
 
   
@@ -240,13 +240,13 @@
   <h2 id="table-of-contents">Table of contents</h2>
 <ol>
 <li>Prerequisites</li>
-<li>Blinking on board LED</li>
-<li>Performing some basic Python operations</li>
+<li>Water Detect Click</li>
+<li>Relay Click</li>
 <li>References</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
-<li>Before validating the flashed firmware we must flash the MicroPython application firmware,for which you can follow my <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/">previous blog</a></li>
+<li>Before taking the Zephyr Port of MicroPython into use we must flash the MicroPython application firmware,for which you can follow my <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/">previous blog</a></li>
 <li>To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.For example to install picocom on Linux you can run:</li>
 </ol>
 <p><code> sudo dnf install picocom</code></p>
@@ -255,19 +255,27 @@
 Use this command to change permission-
 <code>sudo chmod 666 /dev/ttyUSB0</code></li>
 </ol>
-<h2 id="blinking-on-board-led">Blinking on board LED:</h2>
-<p>For flashing the on board LED we will first have to locate the port number and GPIO pun number associated with the LED on your board,which you can infer from your board schematics found in design files.
-In case on BeagleConnect Freedom the PORT number is A i.e 0 and the GPIO pun mumbers are 14 and 15.We will be blinking the LED associated with GPIO pin number 14 for this illustration.</p>
-<p>Starting off please enter into the terminal emulator program by running the following command :</p>
-<p><code>picocom /dev/ttyUSB0 -b115200</code></p>
-<p>This will make REPL available for usage.Ypu can follow the follow commands form the pictures to blink the on board LED indefinitely.</p>
-<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/13.png" alt="image alt text"></p>
-<p>Note:Once you are done typing out the program press backspace followed by enter for the blinking to initiate.It will look similar to this:</p>
-<p><a href="https://www.youtube.com/watch?v=KB1giV3791Q">https://www.youtube.com/watch?v=KB1giV3791Q</a></p>
-<h2 id="performing-some-basic-python-operations">Performing some basic Python Operations:</h2>
-<p>To validate the flashed firmware we also perform some basic python operations on our BeagleConnect Freedom board,as seen from the image.</p>
-<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/14.png" alt="image alt text"></p>
-<p>Hence we conclude the flashed application firwmware performs all the operations as expected and can be used for furthur applications.</p>
+<h2 id="water-detect-click">Water Detect Click:</h2>
+<p>Water Detect click is used for detecting water and other electroconductive liquids. If the detection area is wet the output of Microchip&rsquo;s MCP606 CMOS op-amp will go positive, signaling the presence of liquid.The water detection area is made of exposed conducting wire.</p>
+<p>Water Detect click can be used as a household flood alarm sensor, rain detector for smart buildings or for water tanks that act as a limit switch for a pump.
+The Water Detect click functions on the GPIO interface.The MicroPython code can be seen as follows.</p>
+<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/16.png" alt="image alt text"></p>
+<p>The Explanation of the code is as follows:</p>
+<ol>
+<li>We import the necessary classes and modules.</li>
+<li>We initialise the pin and port number to the waterdetect variable.We take pull up registers into use to ensure the known state for signal.</li>
+<li>We write an if-else loop,that prints 1 in presence of water and 0 in absence of it.</li>
+</ol>
+<p>A relatively detailed visual explanation can be seen from my video:
+<a href="https://www.youtube.com/watch?v=DrWm3_VK2vY">https://www.youtube.com/watch?v=DrWm3_VK2vY</a></p>
+<h2 id="relay-click">Relay Click:</h2>
+<p>Relay click is a dual relay Click board, which can be operated by the host MCU.</p>
+<p>Relay click features two G6D-1A-ASI DC5 mini-relays.Despite its size, the G6D-1A-ASI DC5 relay is able to withstand up to 5A and 220V AC/30V DC. It can endure up to 300,000 operations, with 30V DC and 2A. This relay has a single pole only - when the coil is energized, it will attract the internal switching elements and close the circuit, similarly to a switch.</p>
+<p>Since it is able to operate on mains voltage level, it can even be used control the power for a number of small home appliances. It can also be used to activate various electromotors, switch on the lights, or power on the entire embedded system.
+The Relay click functions on the GPIO interface.The MicroPython code alongwith commented explanation can be seen as follows.</p>
+<p><img src="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/15.png" alt="image alt text"></p>
+<p>A detailed working can be seen from my video:
+<a href="https://www.youtube.com/watch?v=eG4dUhQTFf8">https://www.youtube.com/watch?v=eG4dUhQTFf8</a></p>
 <h2 id="references">References:</h2>
 <p><a href="https://github.com/micropython/micropython/blob/master/ports/zephyr/README.md">https://github.com/micropython/micropython/blob/master/ports/zephyr/README.md</a>
 <a href="https://github.com/jadonk/beagle_connect_zephyr_board">https://github.com/jadonk/beagle_connect_zephyr_board</a></p>
@@ -275,17 +283,17 @@ In case on BeagleConnect Freedom the PORT number is A i.e 0 and the GPIO pun mum
   
   <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fusing-gpio-class-to-run-click-boards-on-beagleconnect-freedom%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fusing-gpio-class-to-run-click-boards-on-beagleconnect-freedom%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fusing-gpio-class-to-run-click-boards-on-beagleconnect-freedom%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fusing-gpio-class-to-run-click-boards-on-beagleconnect-freedom%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fusing-gpio-class-to-run-click-boards-on-beagleconnect-freedom%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fblinking-led-using-flashed-micropython-application%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fusing-gpio-class-to-run-click-boards-on-beagleconnect-freedom%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -317,13 +325,13 @@ In case on BeagleConnect Freedom the PORT number is A i.e 0 and the GPIO pun mum
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/">Building and Flashing Firmware on BeagleConnect Freedom</a>
+      <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/">Blinking LED using flashed MicroPython Application</a>
     </nav>
     
   </div>
@@ -332,14 +340,8 @@ In case on BeagleConnect Freedom the PORT number is A i.e 0 and the GPIO pun mum
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-gpio-class-to-run-click-boards-on-beagleconnect-freedom/">Using GPIO class to run Click Boards on BeagleConnect Freedom</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-gpio-class-to-run-click-boards-on-beagleconnect-freedom/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

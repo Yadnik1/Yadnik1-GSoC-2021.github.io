@@ -7,14 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using GPIO class to run Click Boards on BeagleConnect Freedom</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-gpio-class-to-run-click-boards-on-beagleconnect-freedom/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-gpio-class-to-run-click-boards-on-beagleconnect-freedom/</guid>
+      <description>Table of contents  Prerequisites Water Detect Click Relay Click References  Prerequisites  Before taking the Zephyr Port of MicroPython into use we must flash the MicroPython application firmware,for which you can follow my previous blog To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.</description>
+    </item>
+    
     <item>
       <title>Blinking LED using flashed MicroPython Application</title>
       <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/</link>
       <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/</guid>
-      <description>Table of contents  Prerequisites Blinking on board LED Performing some basic Python operations References  Prerequisites  Before validating the falshed firmware we must flash the MicroPython application firmware,for which you can follow my previous blog To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.</description>
+      <description>Table of contents  Prerequisites Blinking on board LED Performing some basic Python operations References  Prerequisites  Before validating the flashed firmware we must flash the MicroPython application firmware,for which you can follow my previous blog To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.</description>
     </item>
     
     <item>
