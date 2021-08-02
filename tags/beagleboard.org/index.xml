@@ -35,5 +35,14 @@
       <description>Table of contents  Prerequisites Building the MicoPython application Flashing the MicroPython application References  Prerequisites  Before performing building and flashing operations we need to make sure that we have installed all the dependencies. For installing all the dependencies you can follow my previous blog or follow zephyr documentation. Since the BeagleConnect Freedom Board has not yet been merged in the Zephyr upstream please clone forked repository once all the remaining dependencies have been installed, remove the zephyr folder from the zephyrproject directory and paste the cloned zephyr folder into it to make sure that our board exists in the board directory while building it.</description>
     </item>
     
+    <item>
+      <title>Using I2C class to run Click Boards on BeagleConnect Freedom</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-i2c-class-to-run-click-boards-on-beagleconnect-freedom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-i2c-class-to-run-click-boards-on-beagleconnect-freedom/</guid>
+      <description>Table of contents  Prerequisites Temperature and Humidity 13 Click Air Quality 4 Click References  Prerequisites  Before taking the Zephyr Port of MicroPython into use we must flash the MicroPython application firmware,for which you can follow my previous blog To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.</description>
+    </item>
+    
   </channel>
 </rss>

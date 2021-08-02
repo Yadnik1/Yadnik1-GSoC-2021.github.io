@@ -9,10 +9,10 @@
 
   <title>Using GPIO class to run Click Boards on BeagleConnect Freedom &middot; MicroPython for BeagleConnect Freedom</title>
 
+    
 
-
-
-
+  
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
 
   <!--[if lte IE 8]>
@@ -31,30 +31,30 @@
 
   <link rel="stylesheet" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/css/blackburn.css">
 
-
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-
+  
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
 
-
+  
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+ 
+  
 
-
-
-
+  
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
   <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
-
+  
   <script>hljs.initHighlightingOnLoad();</script>
-
+  
 
   <link rel="shortcut icon" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/img/favicon.ico" type="image/x-icon" />
 
-
-
+  
+  
 
 </head>
 
@@ -62,125 +62,125 @@
 <body>
 <div id="layout">
 
-
+  
 <a href="#menu" id="menuLink" class="menu-link">
-
+  
   <span></span>
 </a>
 <div id="menu">
 
-
+  
   <a class="pure-menu-heading brand" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/">GSoC 2021</a>
 
 
   <div class="pure-menu">
     <ul class="pure-menu-list">
-
-
+      
+      
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
-
+      
         </li>
-
-
+      
+      
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
-
+      
         </li>
-
-
+      
+      
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
-
+      
         </li>
-
-
+      
+      
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/journal/"><i class='fa fa-book fa-fw'></i>Journal</a>
-
+      
         </li>
-
+      
     </ul>
   </div>
 
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/jadonk/beagleconnect" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
     </li>
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
   </ul>
 </div>
@@ -215,25 +215,25 @@
     <time>28 Jul 2021</time>
   </div>
 
+  
 
+  
 
-
-
-
-
-
+  
+  
+  
   <div>
     <i class="fa fa-tags fa-fw"></i>
-
+    
       <a class="post-taxonomy-tag" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/iot">IOT</a>&nbsp;&#47;
-
+    
       <a class="post-taxonomy-tag" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/beagleboard.org">BeagleBoard.org</a>&nbsp;&#47;
-
+    
       <a class="post-taxonomy-tag" href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/embedded-systems">Embedded Systems</a>
-
+    
   </div>
-
-
+  
+  
 
 </div>
 
@@ -254,7 +254,10 @@
 <li>Changing permissions on serial ports:
 Use this command to change permission-
 <code>sudo chmod 666 /dev/ttyUSB0</code></li>
+<li>Starting off please enter into the terminal emulator program by running the following command :</li>
 </ol>
+<p><code>picocom /dev/ttyUSB0 -b115200</code></p>
+<p>This will make REPL available for usage.</p>
 <h2 id="water-detect-click">Water Detect Click:</h2>
 <p>Water Detect click is used for detecting water and other electroconductive liquids. If the detection area is wet the output of Microchip&rsquo;s MCP606 CMOS op-amp will go positive, signaling the presence of liquid.The water detection area is made of exposed conducting wire.</p>
 <p>Water Detect click can be used as a household flood alarm sensor, rain detector for smart buildings or for water tanks that act as a limit switch for a pump.
@@ -280,7 +283,7 @@ The Relay click functions on the GPIO interface.The MicroPython code alongwith c
 <p><a href="https://github.com/micropython/micropython/blob/master/ports/zephyr/README.md">https://github.com/micropython/micropython/blob/master/ports/zephyr/README.md</a>
 <a href="https://github.com/jadonk/beagle_connect_zephyr_board">https://github.com/jadonk/beagle_connect_zephyr_board</a></p>
 
-
+  
   <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
 	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyadnik1.github.io%2fYadnik1-GSoC-2021.github.io%2fpost%2fusing-gpio-class-to-run-click-boards-on-beagleconnect-freedom%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
@@ -321,42 +324,42 @@ The Relay click functions on the GPIO interface.The MicroPython code alongwith c
 </style>
 
 
-
+  
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
-
+    
     <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/"><i class="fa fa-chevron-left"></i></a>
-
+    
   </div>
   <div class="pure-u-10-24">
-
+    
     <nav class="prev">
       <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/">Blinking LED using flashed MicroPython Application</a>
     </nav>
-
+    
   </div>
   <div class="pure-u-2-24">
     &nbsp;
   </div>
   <div class="pure-u-10-24">
-
+    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-
+    
   </div>
 </div>
 
 
-
-
-
-
+  
+  
+  
+  
 <div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
-
-
+    
+    
     if (window.location.hostname == "localhost")
         return;
 
@@ -370,7 +373,7 @@ The Relay click functions on the GPIO interface.The MicroPython code alongwith c
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-
+  
 
 </div>
 
@@ -383,7 +386,7 @@ The Relay click functions on the GPIO interface.The MicroPython code alongwith c
 
 
 <script>
-
+  
   if (window.location.hostname != "localhost") {
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -403,3 +406,4 @@ The Relay click functions on the GPIO interface.The MicroPython code alongwith c
 
 </body>
 </html>
+
