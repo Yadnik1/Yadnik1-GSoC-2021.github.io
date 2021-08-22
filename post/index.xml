@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Report for GSoC 2021</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/project-report-for-gsoc-2021/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/project-report-for-gsoc-2021/</guid>
+      <description>Table of contents  About Introduction Detailed Implementation  Flashing and validating the Zephyr port of MicroPython GPIO Class I2C Class UART Class SPI Class Documentation:   Benefits Conclusion Future Improvements References  About  Student Name: Yadnik Bendale Mentors: Jason Kridner, Deepak Khatri, Tim Orling GSoC entry link: https://summerofcode.withgoogle.com/projects/#6316697687949312 Blog link: https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/ Introductory video: https://www.youtube.com/watch?v=x1hBazDr2Bk Proposal link: https://elinux.org/BeagleBoard/GSoC_2021/Micropython_for_BeagleConnect_Freedom  Introduction BeagleConnect Freedom board is based on the Zephyr Project which is a scalable real-time operating system (RTOS).</description>
+    </item>
+    
     <item>
       <title>Using I2C class to run Click Boards on BeagleConnect Freedom</title>
       <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-i2c-class-to-run-click-boards-on-beagleconnect-freedom/</link>

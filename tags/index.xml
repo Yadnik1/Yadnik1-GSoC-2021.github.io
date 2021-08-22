@@ -7,13 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BeagleBoard.org</title>
       <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/beagleboard.org/</link>
-      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/beagleboard.org/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GSoC 2021</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/gsoc-2021/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/gsoc-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IOT</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/iot/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/iot/</guid>
       <description></description>
     </item>
     
@@ -23,15 +41,6 @@
       <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/embedded-systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>IOT</title>
-      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/iot/</link>
-      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/iot/</guid>
       <description></description>
     </item>
     
