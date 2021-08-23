@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on MicroPython for BeagleConnect Freedom</title>
+    <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/</link>
+    <description>Recent content in Categories on MicroPython for BeagleConnect Freedom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 21 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BeagleBoard.org</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/beagleboard.org/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/beagleboard.org/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GSoC 2021</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/gsoc-2021/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/gsoc-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IOT</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/iot/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/iot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embedded Systems</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/embedded-systems/</link>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/embedded-systems/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

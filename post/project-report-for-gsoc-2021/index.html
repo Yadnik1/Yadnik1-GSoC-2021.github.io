@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="MicroPython for BeagleConnect Freedom">
-  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="generator" content="Hugo 0.87.0" />
 
   <title>Project Report for GSoC 2021 &middot; MicroPython for BeagleConnect Freedom</title>
 
@@ -286,7 +286,7 @@ The goal of the project intitially was to enable MicroPython and CircuitPython f
 <li><a href="https://www.mikroe.com/buzz-2-click">Buzz 2 click</a>: Could get the Buzzer to work, emitting sound at maximum pitch.</li>
 </ol>
 <h3 id="3-i2c-class">3. I2C Class:</h3>
-<p>The boards were run individually as well as simultaneously on the I2C class. Wrote driver code for the 2 click boards operating on this peripheral to get the required readings from them.</p>
+<p>Both the click boards were successfully implemented on the I2C class. Wrote driver code for the 2 click boards operating on this peripheral to get the required readings from them.</p>
 <ol>
 <li><a href="https://www.mikroe.com/temphum-13-click">Temperatre and Humiditiy 13 click</a>: The click board accurately returned Temperature and Humidity values.</li>
 <li><a href="https://www.mikroe.com/air-quality-4-click">Air quality 4 click</a>: Could get the Total volatile organic compounds (TVOC)  and CO2 equivalent readings accurately and tested it extensively in various scenarios.</li>
@@ -303,12 +303,15 @@ Also observed that the UART class was a work under progress,some methods like ua
 <p>Was able to write a driver code for the <a href="https://www.mikroe.com/accel-10-click">Accel 10 click</a>,however learned towards the end of my project timeline that SPI class for the particular port could only be initalised.Read and write operations of registers could not be performed,due to which could not run the click boards on this peripheral class.</p>
 <h3 id="6-documentation">6. Documentation:</h3>
 <p>This was the first time someone was using the Zephyr port of MicroPython so extensively and hence effective documentation was a very important apsect of this project.I documented both I2C and GPIO classes  implementation from ground up including the basics and how to&rsquo;s required, like building and flashing the application firmware.
-All the driver code I have written is present in the Github repository.I also uploaded videos on Youtube with explanation of all the click boards I was able to run.
-Playlist of Youtube Videos: <a href="https://www.youtube.com/watch?v=x1hBazDr2Bk&amp;list=PLbZw2G3ld0D471Cp4zPe0opPVPxQNkkxe">https://www.youtube.com/watch?v=x1hBazDr2Bk&amp;list=PLbZw2G3ld0D471Cp4zPe0opPVPxQNkkxe</a>
-Posts on blog: https: <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/">https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/</a>
-Github repository: <a href="https://github.com/Yadnik1/Examples-Zephyr-port-of-MicroPython-">https://github.com/Yadnik1/Examples-Zephyr-port-of-MicroPython-</a></p>
+All the driver code I have written is present in the Github repository.I also uploaded videos on Youtube with explanation of all the click boards I was able to run.</p>
+<ol>
+<li>Playlist of Youtube Videos: <a href="https://www.youtube.com/watch?v=x1hBazDr2Bk&amp;list=PLbZw2G3ld0D471Cp4zPe0opPVPxQNkkxe">https://www.youtube.com/watch?v=x1hBazDr2Bk&amp;list=PLbZw2G3ld0D471Cp4zPe0opPVPxQNkkxe</a></li>
+<li>Posts on blog: https: <a href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/">https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/</a></li>
+<li>Github repository: <a href="https://github.com/Yadnik1/Examples-Zephyr-port-of-MicroPython-">https://github.com/Yadnik1/Examples-Zephyr-port-of-MicroPython-</a></li>
+</ol>
 <h2 id="benefits">Benefits</h2>
-<p>With this project the users of  BeagleConnect Freedom or any other users working on the Zephyr Port of MicroPython will be able be able to take MicroPython effectively into use for building their application.With the work done on this project there is enough documentaion suggesting the differences between the Zephyr and generic port of MicroPython.Also drivers for some sensor ICs were written for the first time under this project.Users from the zephyr community can also take instances from this project when using MicroPython on boards having Zephyr support increasing the reach of MicroPython multifold.Under this project MicroPython code was written for the first time for the Mickroe Click boards, generally working in C language.
+<p>With this project the users of  BeagleConnect Freedom or any other users working on the Zephyr Port of MicroPython will be able be able to take MicroPython effectively into use for building their application.With the work done on this project there is enough documentation suggesting the differences between the Zephyr and generic port of MicroPython.Also drivers for some sensor ICs were written for the first time under this project.Users from the zephyr community can also take instances from this project when using MicroPython on boards having Zephyr support increasing the reach of MicroPython multifold.
+Under this project MicroPython code was written for the first time for the Mickroe Click boards, generally working in C language.
 With the various questions I asked on <a href="https://forum.micropython.org/viewforum.php?f=15&amp;sid=8a12f6c8724db72a1f2c48fdd011c73e">forums</a>, it will also make it easier for Zephyr port users to locate the state of the project and clear their doubts since no official documentation for this port exists apart from the Readme file available on the MicroPython repository.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>I will  continue to support this project in the future, take care of any bugs, issues and will continue implementing additional features whenever required.I will also work post GSoC to complete the missed goals of this project.

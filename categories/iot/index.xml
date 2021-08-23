@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IOT on MicroPython for BeagleConnect Freedom</title>
+    <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/iot/</link>
+    <description>Recent content in IOT on MicroPython for BeagleConnect Freedom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 21 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Report for GSoC 2021</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/project-report-for-gsoc-2021/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/project-report-for-gsoc-2021/</guid>
+      <description>Table of contents  About Introduction Detailed Implementation  Flashing and validating the Zephyr port of MicroPython GPIO Class I2C Class UART Class SPI Class Documentation:   Benefits Conclusion Future Improvements References  About  Student Name: Yadnik Bendale Mentors: Jason Kridner, Deepak Khatri, Tim Orling GSoC entry link: https://summerofcode.withgoogle.com/projects/#6316697687949312 Blog link: https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/ Introductory video: https://www.youtube.com/watch?v=x1hBazDr2Bk Proposal link: https://elinux.org/BeagleBoard/GSoC_2021/Micropython_for_BeagleConnect_Freedom  Introduction BeagleConnect Freedom board is based on the Zephyr Project which is a scalable real-time operating system (RTOS).</description>
+    </item>
+    
+    <item>
+      <title>Using I2C class to run Click Boards on BeagleConnect Freedom</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-i2c-class-to-run-click-boards-on-beagleconnect-freedom/</link>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-i2c-class-to-run-click-boards-on-beagleconnect-freedom/</guid>
+      <description>Table of contents  Prerequisites Temperature and Humidity 13 Click Air Quality 4 Click References  Prerequisites  Before taking the Zephyr Port of MicroPython into use we must flash the MicroPython application firmware,for which you can follow my previous blog To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.</description>
+    </item>
+    
+    <item>
+      <title>Using GPIO class to run Click Boards on BeagleConnect Freedom</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-gpio-class-to-run-click-boards-on-beagleconnect-freedom/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-gpio-class-to-run-click-boards-on-beagleconnect-freedom/</guid>
+      <description>Table of contents  Prerequisites Water Detect Click Relay Click References  Prerequisites  Before taking the Zephyr Port of MicroPython into use we must flash the MicroPython application firmware,for which you can follow my previous blog To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.</description>
+    </item>
+    
+    <item>
+      <title>Blinking LED using flashed MicroPython Application</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/blinking-led-using-flashed-micropython-application/</guid>
+      <description>Table of contents  Prerequisites Blinking on board LED Performing some basic Python operations References  Prerequisites  Before validating the flashed firmware we must flash the MicroPython application firmware,for which you can follow my previous blog To access the prompt over USB-serial you need to use a terminal emulator program. On Windows TeraTerm is a good choice, on Mac you can use the built-in screen program, and Linux has picocom and minicom.</description>
+    </item>
+    
+    <item>
+      <title>Building and Flashing Firmware on BeagleConnect Freedom</title>
+      <link>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/</guid>
+      <description>Table of contents  Prerequisites Building the MicoPython application Flashing the MicroPython application References  Prerequisites  Before performing building and flashing operations we need to make sure that we have installed all the dependencies. For installing all the dependencies you can follow my previous blog or follow zephyr documentation. Since the BeagleConnect Freedom Board has not yet been merged in the Zephyr upstream please clone forked repository once all the remaining dependencies have been installed, remove the zephyr folder from the zephyrproject directory and paste the cloned zephyr folder into it to make sure that our board exists in the board directory while building it.</description>
+    </item>
+    
+  </channel>
+</rss>

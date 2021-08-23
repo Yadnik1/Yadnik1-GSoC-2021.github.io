@@ -5,10 +5,22 @@
     <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/beagleboard.org/</loc>
     <lastmod>2021-08-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/beagleboard.org/</loc>
+    <lastmod>2021-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/</loc>
+    <lastmod>2021-08-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/gsoc-2021/</loc>
     <lastmod>2021-08-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/gsoc-2021/</loc>
+    <lastmod>2021-08-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/iot/</loc>
+    <lastmod>2021-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/iot/</loc>
     <lastmod>2021-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/</loc>
@@ -26,6 +38,9 @@
     <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/tags/embedded-systems/</loc>
     <lastmod>2021-08-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/categories/embedded-systems/</loc>
+    <lastmod>2021-08-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/using-i2c-class-to-run-click-boards-on-beagleconnect-freedom/</loc>
     <lastmod>2021-08-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -37,7 +52,5 @@
   </url><url>
     <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/post/building-and-flashing-firmware-on-beagleconnect-freedom/</loc>
     <lastmod>2021-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yadnik1.github.io/Yadnik1-GSoC-2021.github.io/topics/</loc>
   </url>
 </urlset>
